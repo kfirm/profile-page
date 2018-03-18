@@ -6,6 +6,21 @@ body {
     font-family: Arial;
 }
 
+svg {
+    margin-right: 25px;
+}
+
+.social-links {
+    margin-top: 220px;
+    animation-name: fromBottom;
+    animation-duration: 4s;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 #wrapper {
     position: relative;
     width: 100%;
@@ -151,6 +166,15 @@ body {
 }
 
 @keyframes fromTop {
+    0% {
+        transform: translateY(-230px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
     0% {
         transform: translateY(130px);
     }
