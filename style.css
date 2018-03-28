@@ -11,14 +11,24 @@ svg {
 }
 
 .social-links {
-    margin-top: 220px;
+    display: inline-flex;
+    margin-top: 80px;
     animation-name: fromBottom;
     animation-duration: 4s;
 }
 
+
 a {
     color: white;
     text-decoration: none;
+}
+
+.social-links-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-links-icon:active {
+    transform: translateY(-1px);
 }
 
 #wrapper {
