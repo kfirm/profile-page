@@ -1,0 +1,20 @@
+{
+  "name": "profile-page",
+  "version": "1.0.0",
+  "description": "My profile page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kmarouani@bitbucket.org/kmarouani/profile-page.git"
+  },
+  "author": "Kfir Marouani",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/kmarouani/profile-page#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}

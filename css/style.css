@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: linear-gradient(to right, rgba(42, 42, 42, 0.8), rgba(168, 168, 168, 0.8)), url("../img/kfir_full_width.jpg");
+  background-size: cover; }
+
+.social-container {
+  width: 40%;
+  height: 40%;
+  display: inline-block;
+  position: relative;
+  margin: 20px; }
+  .social-container .social-box {
+    position: absolute;
+    text-align: center;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: rgba(100, 100, 100, 0.9);
+    width: 25%;
+    height: 25%;
+    margin: 20px;
+    border-style: solid;
+    border-width: 1px; }
+    .social-container .social-box:hover {
+      transform: scale(1.2);
+      z-index: 100; }
+    .social-container .social-box:active {
+      transform: translateY(0px); }
+    .social-container .social-box__github {
+      top: 5%;
+      left: 10%; }
+    .social-container .social-box__npm {
+      top: 20%;
+      left: 3%; }
