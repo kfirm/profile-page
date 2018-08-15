@@ -1,0 +1,45 @@
+.name {
+
+    font-size: 10rem; 
+    color: white;
+    letter-spacing: 2rem;
+
+    &__first {
+        margin: 1rem;
+        animation: first-name 2s; 
+
+    }
+
+    &__last {
+        margin: 1rem; 
+        animation: last-name 2s; 
+    }
+
+    @keyframes first-name {
+        0% {
+            opacity: 0;
+            transform: translateX(-350px);
+        }
+        50% {
+            opacity: .2;      
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes last-name {
+        0% {
+            opacity: 0;
+            transform: translateY(400px);
+        }
+        50% {
+            opacity: .2;      
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

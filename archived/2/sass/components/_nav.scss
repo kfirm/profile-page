@@ -1,0 +1,30 @@
+.nav {
+
+    line-height: 15vh;
+    background-color: rgba(26, 26, 26, .75);
+    color: white;
+    height: 15vh;
+    transition: color .1s;
+    font-size: 2rem;
+
+    a:link,
+    a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:hover {
+        color: rgba(255, 255, 255, .3);
+      }
+
+    &__item {
+        float: right;
+        margin-right: 10px;
+        transition: color .5s;
+        
+        &:hover {
+          color: white !important;
+        }
+      }
+     
+}
