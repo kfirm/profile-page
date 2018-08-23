@@ -21,29 +21,42 @@ body{
   height: 100vh;
   overflow: hidden;
 
+  &__image {
+    position: absolute;
+    z-index: 99999;
+    margin-left: -77%;
+    margin-top: -500px;
+    transform: scale(0.5);
+    clip-path: polygon(38% 90%, 62% 90%, 62% 0, 38% 0);
+    filter: grayscale(100%) blur(3px);
+  }
+
   &__profile {
-    background-color: #fff;
+    background-color: #eee;
     position: relative;
-    width: 100vh;
-    margin: 50px auto;
-    height: 80vh;
+    width: 80vw;
+    left: 50%;
+    top: 50%;
+    height: 62vh;
+    box-shadow: 2px 1px 10px dimgrey;
+    transform: translateX(-50%) translateY(-50%);
     //box-shadow: 0 3px 30px 5px #eee;
 
     &__name {
       position: absolute;
-      top: 44%;
-      margin-left: 30px;
+      top: 42%;
+      margin-left: 35%;
       letter-spacing: 2px;
       font-size: 48px;
       font-weight: 500;
-      animation: down-up 6s;
+      animation: down-up 3s;
     }
 
     &__social {
 
       position: absolute;
       display: flex;
-      top:44%;
+      top: 42%;
       right: 20px;
 
       div {
@@ -111,7 +124,7 @@ body{
     opacity: 0;
   }
   100% {
-    top: 44%;
+    top: 42%;
     opacity: .8;
   }
 }
