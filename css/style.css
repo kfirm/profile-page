@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+html {
+  font-size: 62.5%; }
+
 .container {
   width: 80vw;
   height: 80vh;
@@ -9,17 +23,22 @@
   margin: auto; }
   .container .card {
     position: absolute;
-    font-size: 34px;
+    font-size: 3rem;
     width: 25%;
     height: 80%;
-    margin: 15px;
-    background-color: #eee; }
+    margin: 1.5rem;
+    background-color: #eee;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    backface-visibility: hidden; }
     .container .card--0 {
       left: 0;
       z-index: 3;
       opacity: 0.3;
       transform: scale(0.8); }
     .container .card--1 {
+      height: 80%;
+      transition: all .8s ease;
       left: 25%;
       z-index: 2; }
     .container .card--2 {
