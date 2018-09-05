@@ -38,6 +38,28 @@ html {
     -moz-perspective: 150rem;
     backface-visibility: hidden;
 
+    .profile-image {
+      background-image: url(../img/kfir_full_width.jpg);
+      height: 21rem;
+      background-size: cover;
+    }
+
+    .text {
+
+      text-align: center;    
+      font-weight: 100;
+
+      &--name {
+        font-size: 5rem;
+        letter-spacing: 4px;
+      }
+
+      &--phrase {
+        font-size: 2rem;
+        letter-spacing: 5px;
+      }
+    }
+
     //left card
     &--0 {
       left: 0;
@@ -52,6 +74,7 @@ html {
       transition: all .8s ease;
       left: 25%;
       z-index: 2;
+
       // &__front {
       //   background: blue;
 

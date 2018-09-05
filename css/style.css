@@ -31,6 +31,19 @@ html {
     perspective: 150rem;
     -moz-perspective: 150rem;
     backface-visibility: hidden; }
+    .container .card .profile-image {
+      background-image: url(../img/kfir_full_width.jpg);
+      height: 21rem;
+      background-size: cover; }
+    .container .card .text {
+      text-align: center;
+      font-weight: 100; }
+      .container .card .text--name {
+        font-size: 5rem;
+        letter-spacing: 4px; }
+      .container .card .text--prase {
+        font-size: 2rem;
+        letter-spacing: 5px; }
     .container .card--0 {
       left: 0;
       z-index: 3;
