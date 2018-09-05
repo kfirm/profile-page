@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Kfir Marouani</title>
@@ -8,16 +9,19 @@
     <!-- todo: this causes delay in the animations -->
     <!--<script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"-->
     <script src="index.js"></script>
+    <script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
     <!--integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"-->
     <!--crossorigin="anonymous"></script>-->
 </head>
+
 <body>
-<div class="container">
-    <div class="cards-container">
-        <div id="left" class="card card--0">
-            LEFT
-        </div>
-        <div id="main" class="card card--1">
+    <div class="container">
+        <div class="cards-container">
+            <div id="left" class="card card--0">
+                LEFT
+            </div>
+            <div id="main" class="card card--1">
                 <div class="profile-image">
                 </div>
 
@@ -27,14 +31,26 @@
                 <p class="text text--phrase">
                     ...javascript everything kind'a dude
                 </p>
-        </div>
-        <div id="right" class="card card--2">
-            RIGHT
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kfir-marouani-a908541/">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/kfirm">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.npmjs.com/~kfir.marouani">
+                        <i class="fab fa-npm fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="right" class="card card--2">
+                RIGHT
+            </div>
         </div>
     </div>
-</div>
-<button id="moveBtn" onclick="move()">
-    Move
-</button>
+    <button id="moveBtn" onclick="move()">
+        Move
+    </button>
 </body>
+
 </html>

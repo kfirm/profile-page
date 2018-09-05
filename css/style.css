@@ -7,7 +7,8 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777; }
+  color: #777;
+  background: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4); }
 
 html {
   font-size: 62.5%; }
@@ -23,9 +24,10 @@ html {
   margin: auto; }
   .container .card {
     position: absolute;
+    box-shadow: 0px 0px 15px 2px #dedede;
     font-size: 3rem;
     width: 25%;
-    height: 80%;
+    height: 100%;
     margin: 1.5rem;
     background-color: #eee;
     perspective: 150rem;
@@ -41,16 +43,18 @@ html {
       .container .card .text--name {
         font-size: 5rem;
         letter-spacing: 4px; }
-      .container .card .text--prase {
+      .container .card .text--phrase {
         font-size: 2rem;
         letter-spacing: 5px; }
+    .container .card .social-links {
+      display: flex;
+      justify-content: space-evenly; }
     .container .card--0 {
       left: 0;
       z-index: 3;
       opacity: 0.3;
       transform: scale(0.8); }
     .container .card--1 {
-      height: 80%;
       transition: all .8s ease;
       left: 25%;
       z-index: 2; }
