@@ -10,9 +10,9 @@ function move() {
     }
 
     window.count = window.count || 0;
-    var card0 = document.getElementById("card0");
-    var card1 = document.getElementById("card1");
-    var card2 = document.getElementById("card2");
+    var leftCard = document.getElementById("left");
+    var mainCard = document.getElementById("main");
+    var rightCard = document.getElementById("right");
 
     var rotation = {
         '0': `move-20-30 ${animationDelay}s`,
@@ -21,26 +21,39 @@ function move() {
     };
 
 
-    card0.style.animation = rotation[window.count % 3];
-    card1.style.animation = rotation[(window.count + 1) % 3];
-    card2.style.animation = rotation[(window.count + 2) % 3];
+    leftCard.style.animation = rotation[window.count % 3];
+    mainCard.style.animation = rotation[(window.count + 1) % 3];
+    rightCard.style.animation = rotation[(window.count + 2) % 3];
 
     setTimeout(function() {
+        // // left -> main
+        // card0.classList.remove("card--left");
+        // card0.classList.add("card--main");
+
+        // // main -> right
+        // card1.classList.remove("card--main");
+        // card1.classList.add("card--right");
+
+        // // right -> left
+        // card2.classList.remove("card--right");
+        // card2.classList.add("card--left");
+
         // 0 to 1
-        card0.classList.remove("card--" + window.count % 3);
-        card0.classList.add("card--" + (window.count + 1) % 3);
+        leftCard.classList.remove("card--" + window.count % 3);
+        leftCard.classList.add("card--" + (window.count + 1) % 3);
 
         // 1 to 2
-        card1.classList.remove("card--" + (window.count + 1) % 3);
-        card1.classList.add("card--" + (window.count + 2) % 3);
+        mainCard.classList.remove("card--" + (window.count + 1) % 3);
+        mainCard.classList.add("card--" + (window.count + 2) % 3);
 
         // 2 to 0
-        card2.classList.remove("card--" + (window.count + 2) % 3);
-        card2.classList.add("card--" + (window.count + 3) % 3);
+        rightCard.classList.remove("card--" + (window.count + 2) % 3);
+        rightCard.classList.add("card--" + (window.count + 3) % 3);
 
-        card0.style.animation = "";
-        card1.style.animation = "";
-        card2.style.animation = "";
+
+        leftCard.style.animation = "";
+        mainCard.style.animation = "";
+        rightCard.style.animation = "";
 
         window.count += 1;
         window.onthemove = false;
