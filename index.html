@@ -19,9 +19,6 @@
 <body>
 <div class="container">
     <div class="cards-container">
-        <div style="margin-top: 50vh">
-            <i onclick="move()" class="fas fa-angle-left fa-7x"></i>
-        </div>
         <div id="left" class="skills card card--0">
             <p class="skills skills__title">Skills</p>
             <ul>
@@ -56,9 +53,10 @@
         <div id="right" class="card card--2">
             RIGHT
         </div>
-        <div style="margin-top: 50vh">
-            <i onclick="move()" class="fas fa-angle-right fa-7x"></i>
-        </div>
+    </div>
+    <div class="switch">
+            <i class="switch__left fas fa-angle-left fa-7x" onclick="move()"></i>
+            <i class="switch__right fas fa-angle-right fa-7x" onclick="move()"></i>
     </div>
 </div>
 </body>

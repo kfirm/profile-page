@@ -123,3 +123,20 @@ html {
     transform: scale(1.05); }
   100% {
     transform: scale(1); } }
+
+.switch {
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff; }
+  .switch__right {
+    animation: blink 3s infinite; }
+  .switch__left {
+    animation: blink 3s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: .1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: .1; } }
