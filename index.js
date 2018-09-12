@@ -60,3 +60,8 @@ function move() {
 
     }, animationDelay * 1000);
 }
+
+function moveLeft() {
+    window.count = window.count - 1;
+    move();
+}
