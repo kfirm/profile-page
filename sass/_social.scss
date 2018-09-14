@@ -1,0 +1,16 @@
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+
+    a, a:active, a:visited {
+        text-decoration: none;
+        color: currentColor;
+        transition: all .5s;
+    }
+
+    a:hover{
+        transform: translateY(-10px);
+        box-shadow: 5px;
+    }
+  }

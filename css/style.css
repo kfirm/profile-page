@@ -26,22 +26,6 @@ html {
     perspective: 150rem;
     -moz-perspective: 150rem;
     backface-visibility: hidden; }
-    .container .cards-container .card .profile-image {
-      background-image: url(../img/kfir_full_width.jpg);
-      height: 21rem;
-      background-size: cover; }
-    .container .cards-container .card .text {
-      text-align: center;
-      font-weight: 100; }
-      .container .cards-container .card .text--name {
-        font-size: 5rem;
-        letter-spacing: 4px; }
-      .container .cards-container .card .text--phrase {
-        font-size: 2rem;
-        letter-spacing: 5px; }
-    .container .cards-container .card .social-links {
-      display: flex;
-      justify-content: space-evenly; }
     .container .cards-container .card--0 {
       left: 0;
       z-index: 3;
@@ -140,3 +124,31 @@ html {
     opacity: 1; }
   100% {
     opacity: .1; } }
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem 0; }
+  .social-links a, .social-links a:active, .social-links a:visited {
+    text-decoration: none;
+    color: currentColor;
+    transition: all .5s; }
+  .social-links a:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px; }
+
+.profile__image {
+  background-image: url(../img/kfir_full_width.jpg);
+  height: 55vh;
+  background-size: cover; }
+
+.profile__text {
+  margin-top: 5rem;
+  text-align: center;
+  font-weight: 100; }
+  .profile__text--name {
+    font-size: 5rem;
+    letter-spacing: 4px; }
+  .profile__text--phrase {
+    font-size: 2rem;
+    letter-spacing: 5px; }
