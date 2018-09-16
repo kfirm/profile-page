@@ -49,6 +49,8 @@ html {
       perspective: 150rem;
       -moz-perspective: 150rem;
       backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
 
       //left card
       &--0 {

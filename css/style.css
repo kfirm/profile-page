@@ -25,7 +25,9 @@ html {
     background-color: #eee;
     perspective: 150rem;
     -moz-perspective: 150rem;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden; }
     .container .cards-container .card--0 {
       left: 0;
       z-index: 3;
@@ -71,12 +73,14 @@ html {
 .skills {
   font-weight: 300; }
   .skills__video {
-    width: 100%; }
+    width: 100%;
+    position: absolute; }
   .skills__title {
     text-align: center;
     font-size: 3rem;
     margin: 2rem 0;
-    font-weight: 600; }
+    font-weight: 600;
+    position: relative; }
   .skills ul {
     list-style: none; }
     .skills ul li {
