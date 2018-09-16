@@ -1,25 +1,25 @@
 .profile {
 
-    &__image {
-        background-image: url(../img/kfir_full_width.jpg);
-        height: 55vh;
-        background-size: cover;
+  &__image {
+    background-image: url(../img/kfir_full_width.jpg);
+    height: 55vh;
+    background-size: cover;
+  }
+
+  &__text {
+
+    margin-top: 2rem 0;
+    text-align: center;
+    font-weight: 100;
+
+    &--name {
+      font-size: 5rem;
+      letter-spacing: 4px;
     }
 
-    &__text {
-    
-        margin-top: 2rem 0;
-        text-align: center;
-        font-weight: 100;
-    
-        &--name {
-            font-size: 5rem;
-            letter-spacing: 4px;
-        }
-    
-        &--phrase {
-            font-size: 2rem;
-            letter-spacing: 5px;
-        }
+    &--phrase {
+      font-size: 2rem;
+      letter-spacing: 5px;
     }
+  }
 }
