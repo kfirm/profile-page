@@ -1,14 +1,15 @@
 .profile {
 
   &__image {
-    background-image: url(../img/kfir_full_width.jpg);
+    background-image: url(../img/egg.png);
+    //background-image: url(../img/kfir_full_width.jpg);
     height: 55vh;
     background-size: cover;
   }
 
   &__text {
 
-    margin-top: 2rem 0;
+    margin: 2rem 0;
     text-align: center;
     font-weight: 100;
 

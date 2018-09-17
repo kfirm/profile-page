@@ -9,42 +9,48 @@
 
   &__title {
     text-align: center;
-    font-size: 3rem;
-    margin: 2rem 0;
+    font-size: 7rem;
+    margin: 10rem 0;
     font-weight: 600;
     position: relative;
+    color: white;
   }
 
-  ul {
+  &__list {
 
-    list-style: none;
+    margin-top: 14rem;
 
-    li {
-      font-size: 2rem;
-      animation: FadeIn 1s linear;
-      animation-fill-mode: both;
-      margin: 0 auto;
-      padding: 10px;
-      width: 60%;
-      text-align: center;
+    ul {
 
-      &:not(:last-child) {
-        border-bottom: 1px solid red;
-      }
+      list-style: none;
 
-      &:nth-child(1) {
-        animation-delay: .1s
-      }
-      &:nth-child(2) {
-        animation-delay: .3s
-      }
-      &:nth-child(3) {
-        animation-delay: .5s
-      }
-      &:nth-child(4) {
-        animation-delay: .7s
-      }
+      li {
+        font-size: 2rem;
+        animation: FadeIn 1s linear;
+        animation-fill-mode: both;
+        margin: 0 auto;
+        padding: 10px;
+        width: 60%;
+        text-align: center;
 
+        &:not(:last-child) {
+          border-bottom: 1px solid red;
+        }
+
+        &:nth-child(1) {
+          animation-delay: .1s
+        }
+        &:nth-child(2) {
+          animation-delay: .3s
+        }
+        &:nth-child(3) {
+          animation-delay: .5s
+        }
+        &:nth-child(4) {
+          animation-delay: .7s
+        }
+
+      }
     }
   }
 }
