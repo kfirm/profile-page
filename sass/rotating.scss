@@ -89,7 +89,7 @@ html {
 
 @keyframes move-20-30 {
   from {
-    left: 0;
+    left: $left-left-card;
     opacity: $opacity-small;
     transform: scale($scale-small);
   }
@@ -118,7 +118,7 @@ html {
     left: $left-right-card;
   }
   to {
-    left: 0;
+    left: $left-left-card;
   }
 }
 
