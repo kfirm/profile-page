@@ -36,6 +36,7 @@ html {
 
     position: relative;
     height: 90vh;
+    margin: 2.5rem 0;
     //display: flex;
     //justify-content: space-between;
 
@@ -65,7 +66,7 @@ html {
         transition: all .8s ease;
         left: $left-main-card;
         z-index: 2;
-        margin: 2.5rem 0;
+        //margin: 2.5rem 0;
 
         // &__front {
         //   background: blue;

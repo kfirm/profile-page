@@ -15,7 +15,8 @@ html {
 
 .container .cards-container {
   position: relative;
-  height: 90vh; }
+  height: 90vh;
+  margin: 2.5rem 0; }
   .container .cards-container .card {
     position: absolute;
     box-shadow: 0 0 15px 2px #dedede;
@@ -36,8 +37,7 @@ html {
     .container .cards-container .card--1 {
       transition: all .8s ease;
       left: 35%;
-      z-index: 2;
-      margin: 2.5rem 0; }
+      z-index: 2; }
     .container .cards-container .card--2 {
       left: 70%;
       z-index: 1;
