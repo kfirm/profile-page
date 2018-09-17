@@ -30,8 +30,8 @@ html {
     border-radius: 10px;
     overflow: hidden; }
     .container .cards-container .card--0 {
-      left: 0;
-      z-index: 3;
+      left: 10%;
+      z-index: 1;
       opacity: 0.3;
       transform: scale(0.9); }
     .container .cards-container .card--1 {
@@ -39,36 +39,40 @@ html {
       left: 35%;
       z-index: 2; }
     .container .cards-container .card--2 {
-      left: 70%;
+      left: 60%;
       z-index: 1;
       opacity: 0.3;
       transform: scale(0.9); }
 
 @keyframes move-20-30 {
   from {
-    left: 0;
+    left: 10%;
     opacity: 0.3;
-    transform: scale(0.9); }
+    transform: scale(0.9);
+    z-index: 2; }
   to {
     left: 35%;
     opacity: 1;
-    transform: scale(1); } }
+    transform: scale(1);
+    z-index: 2; } }
 
 @keyframes move-30-40 {
   from {
     left: 35%;
     opacity: 1;
-    transform: scale(1); }
+    transform: scale(1);
+    z-index: 1; }
   to {
-    left: 70%;
+    left: 60%;
     opacity: 0.3;
-    transform: scale(0.9); } }
+    transform: scale(0.9);
+    z-index: 1; } }
 
 @keyframes move-40-20 {
   from {
-    left: 70%; }
+    left: 60%; }
   to {
-    left: 0; } }
+    left: 10%; } }
 
 .skills {
   font-weight: 300; }
