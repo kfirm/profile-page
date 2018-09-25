@@ -10,15 +10,15 @@
   &__title {
     text-align: center;
     font-size: 7rem;
-    margin: 10rem 0;
-    font-weight: 600;
+    transform: translateY(70%);
+    //font-weight: 600;
     position: relative;
     color: white;
   }
 
   &__list {
 
-    margin-top: 14rem;
+    margin-top: 20rem;
 
     ul {
 

@@ -82,12 +82,11 @@ html {
   .skills__title {
     text-align: center;
     font-size: 7rem;
-    margin: 10rem 0;
-    font-weight: 600;
+    transform: translateY(70%);
     position: relative;
     color: white; }
   .skills__list {
-    margin-top: 14rem; }
+    margin-top: 20rem; }
     .skills__list ul {
       list-style: none; }
       .skills__list ul li {
@@ -149,7 +148,7 @@ html {
     box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.5); }
 
 .profile__image {
-  background-image: url(../img/egg.png);
+  background-image: url(../img/kfir_full_width.jpg);
   height: 55vh;
   background-size: cover; }
 
@@ -165,8 +164,20 @@ html {
     letter-spacing: 5px; }
 
 .biography {
+  position: relative;
   font-weight: 300;
   font-size: 2rem;
   letter-spacing: 5px; }
+  .biography__title {
+    text-align: center;
+    font-size: 7rem;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 40%; }
+  .biography__image {
+    background-image: url(../img/about-me.jpg);
+    height: 29.5vh;
+    background-size: cover; }
   .biography p {
     margin: 5rem 3rem; }
