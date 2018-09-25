@@ -1,9 +1,9 @@
 // see https://jsfiddle.net/v8gys9bu/59/
 $scale-small: .9;
 $opacity-small: .3;
-$left-left-card: 10%;
-$left-main-card: 35%;
-$left-right-card: 60%;
+$left-card: 10%;
+$main-card: 35%;
+$right-card: 60%;
 
 * {
   margin: 0;
@@ -25,13 +25,13 @@ html {
 
 @keyframes left-to-main {
   from {
-    left: $left-left-card;
+    left: $left-card;
     opacity: $opacity-small;
     transform: scale($scale-small);
     z-index: 2;
   }
   to {
-    left: $left-main-card;
+    left: $main-card;
     opacity: 1;
     transform: scale(1);
     z-index: 2;
@@ -40,13 +40,13 @@ html {
 
 @keyframes main-to-right {
   from {
-    left: $left-main-card;
+    left: $main-card;
     opacity: 1;
     transform: scale(1);
     z-index: 1;
   }
   to {
-    left: $left-right-card;
+    left: $right-card;
     opacity: $opacity-small;
     transform: scale($scale-small);
     z-index: 1;
@@ -55,10 +55,10 @@ html {
 
 @keyframes right-to-left {
   from {
-    left: $left-right-card;
+    left: $right-card;
   }
   to {
-    left: $left-left-card;
+    left: $left-card;
   }
 }
 

@@ -107,6 +107,10 @@ html {
           animation-delay: .5s; }
         .skills__list ul li:nth-child(4) {
           animation-delay: .7s; }
+        .skills__list ul li:nth-child(5) {
+          animation-delay: .9s; }
+        .skills__list ul li:nth-child(6) {
+          animation-delay: 1.1s; }
 
 @keyframes FadeIn {
   0% {
@@ -181,3 +185,9 @@ html {
     background-size: cover; }
   .biography p {
     margin: 5rem 3rem; }
+  .biography a {
+    text-decoration: none;
+    border-bottom: solid 1px rgba(115, 115, 115, 0.2);
+    color: #dda455; }
+    .biography a:hover {
+      border-bottom-color: #737373; }

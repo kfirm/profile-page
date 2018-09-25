@@ -19,7 +19,7 @@
 
     //left card
     &--left {
-      left: $left-left-card;
+      left: $left-card;
       z-index: 1;
       opacity: $opacity-small;
       transform: scale($scale-small);
@@ -28,7 +28,7 @@
     // main card
     &--main {
       transition: all .8s ease;
-      left: $left-main-card;
+      left: $main-card;
       z-index: 2;
       //margin: 2.5rem 0;
 
@@ -51,7 +51,7 @@
 
     //right
     &--right {
-      left: $left-right-card;
+      left: $right-card;
       z-index: 1;
       opacity: $opacity-small;
       transform: scale($scale-small);
