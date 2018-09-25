@@ -1,5 +1,16 @@
+const animationDelay = 2;
 
-var animationDelay = 2;
+function getSwitcher(index) {
+    switch (index) {
+        case 0:
+            return [ ['left', 'main'], ['main', 'right'], ['right','left'] ];
+        case 1:
+            return [ ['main', 'right'], ['right', 'left'], ['left','main'] ];
+        case 2:
+            return [ ['right', 'left'], ['left', 'main'], ['main','right'] ];
+
+    }
+}
 
 function move() {
 
@@ -10,14 +21,14 @@ function move() {
     }
 
     window.count = window.count || 0;
-    var leftCard = document.getElementById("left");
-    var mainCard = document.getElementById("main");
-    var rightCard = document.getElementById("right");
+    const leftCard = document.getElementById("left");
+    const mainCard = document.getElementById("main");
+    const rightCard = document.getElementById("right");
 
-    var rotation = {
-        '0': `move-20-30 ${animationDelay}s`,
-        '1': `move-30-40 ${animationDelay}s`,
-        '2': `move-40-20 ${animationDelay}s`
+    const rotation = {
+        '0': `left-to-main ${animationDelay}s`,
+        '1': `main-to-right ${animationDelay}s`,
+        '2': `right-to-left ${animationDelay}s`
     };
 
 
@@ -26,30 +37,19 @@ function move() {
     rightCard.style.animation = rotation[(window.count + 2) % 3];
 
     setTimeout(function() {
-        // // left -> main
-        // card0.classList.remove("card--left");
-        // card0.classList.add("card--main");
 
-        // // main -> right
-        // card1.classList.remove("card--main");
-        // card1.classList.add("card--right");
+        const switcher = getSwitcher(window.count % 3);
+        // left -> main
+        leftCard.classList.remove('cards__card--' + switcher[0][0]);
+        leftCard.classList.add("cards__card--"  + switcher[0][1]);
 
-        // // right -> left
-        // card2.classList.remove("card--right");
-        // card2.classList.add("card--left");
+        // main -> right
+        mainCard.classList.remove("cards__card--" + switcher[1][0]);
+        mainCard.classList.add("cards__card--" + switcher[1][1]);
 
-        // 0 to 1
-        leftCard.classList.remove("card--" + window.count % 3);
-        leftCard.classList.add("card--" + (window.count + 1) % 3);
-
-        // 1 to 2
-        mainCard.classList.remove("card--" + (window.count + 1) % 3);
-        mainCard.classList.add("card--" + (window.count + 2) % 3);
-
-        // 2 to 0
-        rightCard.classList.remove("card--" + (window.count + 2) % 3);
-        rightCard.classList.add("card--" + (window.count + 3) % 3);
-
+        // right -> left
+        rightCard.classList.remove("cards__card--"  + switcher[2][0]);
+        rightCard.classList.add("cards__card--" + switcher[2][1]);
 
         leftCard.style.animation = "";
         mainCard.style.animation = "";
