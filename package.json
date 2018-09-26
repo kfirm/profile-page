@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,9 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/kmarouani/profile-page#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-uglify": "^3.0.1",
     "node-sass": "^4.9.0"
   }
 }

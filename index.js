@@ -1,4 +1,4 @@
-const animationDelay = 2;
+var animationDelay = 2;
 
 function getSwitcher(index) {
     switch (index) {
@@ -21,14 +21,14 @@ function move() {
     }
 
     window.count = window.count || 0;
-    const leftCard = document.getElementById("left");
-    const mainCard = document.getElementById("main");
-    const rightCard = document.getElementById("right");
+    var leftCard = document.getElementById("left");
+    var mainCard = document.getElementById("main");
+    var rightCard = document.getElementById("right");
 
-    const rotation = {
-        '0': `left-to-main ${animationDelay}s`,
-        '1': `main-to-right ${animationDelay}s`,
-        '2': `right-to-left ${animationDelay}s`
+    var rotation = {
+        '0': 'left-to-main ' +  animationDelay + 's',
+        '1': 'main-to-right ' +  animationDelay + 's',
+        '2': 'right-to-left ' +  animationDelay + 's'
     };
 
 
@@ -38,7 +38,7 @@ function move() {
 
     setTimeout(function() {
 
-        const switcher = getSwitcher(window.count % 3);
+        var switcher = getSwitcher(window.count % 3);
         // left -> main
         leftCard.classList.remove('cards__card--' + switcher[0][0]);
         leftCard.classList.add("cards__card--"  + switcher[0][1]);
