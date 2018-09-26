@@ -1,0 +1,60 @@
+.cards {
+
+  position: relative;
+  height: 90vh;
+  margin: 2.5rem 0;
+
+  &__card {
+    position: absolute;
+    box-shadow: 0 0 15px 2px #dedede;
+    font-size: 3rem;
+    width: 30%;
+    height: 100%;
+    background-color: #eee;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+
+    //left card
+    &--left {
+      left: $left-card;
+      z-index: 1;
+      opacity: $opacity-small;
+      transform: scale($scale-small);
+    }
+
+    // main card
+    &--main {
+      transition: all .8s ease;
+      left: $main-card;
+      z-index: 2;
+      //margin: 2.5rem 0;
+
+      // &__front {
+      //   background: blue;
+
+      //   &:hover {
+      //     transform: rotateY(180deg);
+      //   }
+      // }
+      // &__back {
+      //   background-color: red;
+      //    transform: rotateY(180deg);
+      //    &:hover {
+      //       transform: rotateY(0);
+      //    }
+      // }
+
+    }
+
+    //right
+    &--right {
+      left: $right-card;
+      z-index: 1;
+      opacity: $opacity-small;
+      transform: scale($scale-small);
+    }
+  }
+}

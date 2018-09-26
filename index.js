@@ -1,5 +1,16 @@
-
 var animationDelay = 2;
+
+function getSwitcher(index) {
+    switch (index) {
+        case 0:
+            return [ ['left', 'main'], ['main', 'right'], ['right','left'] ];
+        case 1:
+            return [ ['main', 'right'], ['right', 'left'], ['left','main'] ];
+        case 2:
+            return [ ['right', 'left'], ['left', 'main'], ['main','right'] ];
+
+    }
+}
 
 function move() {
 
@@ -10,40 +21,47 @@ function move() {
     }
 
     window.count = window.count || 0;
-    var card0 = document.getElementById("card0");
-    var card1 = document.getElementById("card1");
-    var card2 = document.getElementById("card2");
+    var leftCard = document.getElementById("left");
+    var mainCard = document.getElementById("main");
+    var rightCard = document.getElementById("right");
 
     var rotation = {
-        '0': `move-20-30 ${animationDelay}s`,
-        '1': `move-30-40 ${animationDelay}s`,
-        '2': `move-40-20 ${animationDelay}s`
+        '0': 'left-to-main ' +  animationDelay + 's',
+        '1': 'main-to-right ' +  animationDelay + 's',
+        '2': 'right-to-left ' +  animationDelay + 's'
     };
 
 
-    card0.style.animation = rotation[window.count % 3];
-    card1.style.animation = rotation[(window.count + 1) % 3];
-    card2.style.animation = rotation[(window.count + 2) % 3];
+    leftCard.style.animation = rotation[window.count % 3];
+    mainCard.style.animation = rotation[(window.count + 1) % 3];
+    rightCard.style.animation = rotation[(window.count + 2) % 3];
 
     setTimeout(function() {
-        // 0 to 1
-        card0.classList.remove("card--" + window.count % 3);
-        card0.classList.add("card--" + (window.count + 1) % 3);
 
-        // 1 to 2
-        card1.classList.remove("card--" + (window.count + 1) % 3);
-        card1.classList.add("card--" + (window.count + 2) % 3);
+        var switcher = getSwitcher(window.count % 3);
+        // left -> main
+        leftCard.classList.remove('cards__card--' + switcher[0][0]);
+        leftCard.classList.add("cards__card--"  + switcher[0][1]);
 
-        // 2 to 0
-        card2.classList.remove("card--" + (window.count + 2) % 3);
-        card2.classList.add("card--" + (window.count + 3) % 3);
+        // main -> right
+        mainCard.classList.remove("cards__card--" + switcher[1][0]);
+        mainCard.classList.add("cards__card--" + switcher[1][1]);
 
-        card0.style.animation = "";
-        card1.style.animation = "";
-        card2.style.animation = "";
+        // right -> left
+        rightCard.classList.remove("cards__card--"  + switcher[2][0]);
+        rightCard.classList.add("cards__card--" + switcher[2][1]);
+
+        leftCard.style.animation = "";
+        mainCard.style.animation = "";
+        rightCard.style.animation = "";
 
         window.count += 1;
         window.onthemove = false;
 
     }, animationDelay * 1000);
+}
+
+function moveLeft() {
+    window.count = window.count - 1;
+    move();
 }

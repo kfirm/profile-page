@@ -1,42 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Kfir Marouani</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <!-- todo: this causes delay in the animations -->
+    <!--<script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"-->
+    <script src="index.js"></script>
     <script async src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
             crossorigin="anonymous"></script>
+    <!--integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"-->
+    <!--crossorigin="anonymous"></script>-->
 </head>
+
 <body>
-<div class="main-container">
-    <div class="main-container__image">
-        <img src="./img/kfir_full_width.jpg">
+<img src="img/signeture.png" style="position: absolute; transform: scale(.7);">
+<div class="cards">
+    <div id="left" class="cards cards__card cards__card--left">
+        <div class="skills">
+            <video class="skills__video" autoplay loop>
+                <source src="vid/Hello-World.mp4" type="video/mp4">
+                <source src="vid/Hello-World.webm" type="video/webm">
+                Not Supported!
+            </video>
+            <p class="skills skills__title">Skills</p>
+            <div class="skills skills__list">
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Angular 1 and beyond</li>
+                    <li>HTML5/CSS3</li>
+                    <li>BEM</li>
+                    <li>SCSS</li>
+                    <li>NodeJS</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="main-container__profile">
-        <div class="main-container__profile__name">
-            Kfir Marouani
-        </div>
-        <div class="main-container__profile__social">
-            <div class="main-container__profile__social--linkedin">
+    <div id="main" class="cards cards__card cards__card--main">
+        <div class="profile">
+            <div class="profile__image">
+            </div>
+            <p class="profile__text profile__text--name">
+                Kfir Marouani
+            </p>
+            <p class="profile__text profile__text--phrase">
+                ...javascript everything kind'a dude
+            </p>
+            <div class="social-links">
                 <a href="https://www.linkedin.com/in/kfir-marouani-a908541/">
-                    <i class="fab fa-linkedin fa-3x"></i>
+                    <i class="fab fa-linkedin"></i>
                 </a>
-            </div>
-            <div class="main-container__profile__social--github">
                 <a href="https://github.com/kfirm">
-                    <i class="fab fa-github fa-3x"></i>
+                    <i class="fab fa-github"></i>
                 </a>
-            </div>
-            <div class="main-container__profile__social--npm">
                 <a href="https://www.npmjs.com/~kfir.marouani">
-                    <i class="fab fa-npm fa-3x"></i>
+                    <i class="fab fa-npm"></i>
                 </a>
             </div>
         </div>
-        <hr class="moving-line">
+    </div>
+    <div id="right" class="cards cards__card cards__card--right">
+        <div class="biography">
+            <div class="biography biography__image">
+            </div>
+            <div style="overflow-y: auto">
+                <p class="biography__title">About me</p>
+                <p>
+                    I'm currently a frontend developer in <a href="https://dome9.com" target="_blank">Dome9</a> Cloud
+                    Secturity
+                    located in Tel-Aviv (Israel).
+                </p>
+                <p>
+                    I've been doing frontend development for the past 5 years now.
+                    Before I got introduced to the world of frontend, I had multiple positions (in other companies) as a
+                    backend developer, automation, scalability and QA.
+                    As someone who had 'tasted' multiple positions in the hi-tech world, I can safly say that frontend
+                    development is something I love doing
+                    and feel right at home.
+                </p>
+            </div>
+        </div>
     </div>
 </div>
+<div class="switch">
+    <i class="switch__left fas fa-angle-left fa-7x" onclick="move()"></i>
+    <i class="switch__right fas fa-angle-right fa-7x" onclick="move()"></i>
+</div>
 </body>
+
 </html>
