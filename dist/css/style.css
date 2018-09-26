@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  background: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+  overflow: hidden; }
+
+html {
+  font-size: 62.5%; }
+
+@keyframes left-to-main {
+  from {
+    left: 10%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    z-index: 2; }
+  to {
+    left: 35%;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2; } }
+
+@keyframes main-to-right {
+  from {
+    left: 35%;
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1; }
+  to {
+    left: 60%;
+    opacity: 0.3;
+    transform: scale(0.9);
+    z-index: 1; } }
+
+@keyframes right-to-left {
+  from {
+    left: 60%; }
+  to {
+    left: 10%; } }
+
+.cards {
+  position: relative;
+  height: 90vh;
+  margin: 2.5rem 0; }
+  .cards__card {
+    position: absolute;
+    box-shadow: 0 0 15px 2px #dedede;
+    font-size: 3rem;
+    width: 30%;
+    height: 100%;
+    background-color: #eee;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden; }
+    .cards__card--left {
+      left: 10%;
+      z-index: 1;
+      opacity: 0.3;
+      transform: scale(0.9); }
+    .cards__card--main {
+      transition: all .8s ease;
+      left: 35%;
+      z-index: 2; }
+    .cards__card--right {
+      left: 60%;
+      z-index: 1;
+      opacity: 0.3;
+      transform: scale(0.9); }
+
+.skills {
+  font-weight: 300; }
+  .skills__video {
+    width: 100%;
+    position: absolute; }
+  .skills__title {
+    text-align: center;
+    font-size: 7rem;
+    transform: translateY(70%);
+    position: relative;
+    color: white; }
+  .skills__list {
+    margin-top: 20rem; }
+    .skills__list ul {
+      list-style: none; }
+      .skills__list ul li {
+        font-size: 2rem;
+        animation: FadeIn 1s linear;
+        animation-fill-mode: both;
+        margin: 0 auto;
+        padding: 10px;
+        width: 60%;
+        text-align: center; }
+        .skills__list ul li:not(:last-child) {
+          border-bottom: 1px solid red; }
+        .skills__list ul li:nth-child(1) {
+          animation-delay: .1s; }
+        .skills__list ul li:nth-child(2) {
+          animation-delay: .3s; }
+        .skills__list ul li:nth-child(3) {
+          animation-delay: .5s; }
+        .skills__list ul li:nth-child(4) {
+          animation-delay: .7s; }
+        .skills__list ul li:nth-child(5) {
+          animation-delay: .9s; }
+        .skills__list ul li:nth-child(6) {
+          animation-delay: 1.1s; }
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1); }
+  85% {
+    opacity: 1;
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+
+.switch {
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff; }
+  .switch__right {
+    animation: blink 3s infinite; }
+  .switch__left {
+    animation: blink 3s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: .1; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: .1; } }
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10rem 0; }
+  .social-links a, .social-links a:active, .social-links a:visited {
+    text-decoration: none;
+    color: currentColor;
+    transition: all .5s; }
+  .social-links a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.5); }
+
+.profile__image {
+  background-image: url(../img/kfir_full_width.jpg);
+  height: 55vh;
+  background-size: cover; }
+
+.profile__text {
+  margin: 2rem 0;
+  text-align: center;
+  font-weight: 100; }
+  .profile__text--name {
+    font-size: 5rem;
+    letter-spacing: 4px; }
+  .profile__text--phrase {
+    font-size: 2rem;
+    letter-spacing: 5px; }
+
+.biography {
+  position: relative;
+  font-weight: 300;
+  font-size: 1.9rem;
+  letter-spacing: 5px; }
+  .biography__title {
+    text-align: center;
+    font-size: 7rem;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 40%; }
+  .biography__image {
+    background-image: url(../img/about-me.jpg);
+    height: 29.5vh;
+    background-size: cover; }
+  .biography p {
+    margin: 5rem 3rem; }
+  .biography a {
+    text-decoration: none;
+    border-bottom: solid 1px rgba(115, 115, 115, 0.2);
+    color: #dda455; }
+    .biography a:hover {
+      border-bottom-color: #737373; }
