@@ -8,7 +8,7 @@
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
     "gulp": "gulp",
     "gh-pages": "gh-pages",
-    "deploy": "node-sass sass/main.scss css/style.css | gulp dist | gh-pages -d dist"
+    "deploy": "node-sass sass/main.scss css/style.css | gulp dist | git add dist && git commit -m \"update commit\" | git subtree push --prefix dist page-origin gh-pages"
   },
   "homepage": "https://kfirm.github.io/profile-page",
   "author": "Kfir Marouani",
